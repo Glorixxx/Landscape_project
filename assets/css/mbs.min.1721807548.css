@@ -1,12 +1,3 @@
-@import url(https://fast.fonts.net/t/1.css?apiType=css&projectid=b157b993-557a-4898-b724-a96468d53fef);
-
-@font-face {
-	font-family:"Gill Sans W04 Book";src:url(../fonts/c4be5717-c19c-43a5-9ad3-b548ddf070d4.eot@);src:url(../fonts/c4be5717-c19c-43a5-9ad3-b548ddf070d4.eot@) format("eot"),url(../fonts/4bfd13a9-3195-4d8f-87a9-83a212d18b16.woff2) format("woff2"),url(../fonts/63aa9f40-04be-453a-a672-aa8f9919115d.woff) format("woff"),url(../fonts/a82a5fb6-ad03-4675-801e-d3182a58ff5f.ttf) format("truetype"),url(../fonts/beb2cee2-1a51-44ca-848f-4f795394ee5a.svg) format("svg");
-}
-
-@font-face {
-	font-family:"Joanna W01 Regular";src:url(../fonts/dbe1bef8-6849-4691-aca3-ce5b64d33b99.eot@);src:url(../fonts/dbe1bef8-6849-4691-aca3-ce5b64d33b99.eot@) format("eot"),url(../fonts/abfae713-637b-4bf8-8f0f-0b5184dd4d11.woff2) format("woff2"),url(../fonts/364b86dd-80d0-4a67-ac99-75710e919ab2.woff) format("woff"),url(../fonts/cbee0c5e-0c11-46e9-837b-e0ad44d30af2.ttf) format("truetype"),url(../fonts/fcfd8d6c-9115-48a1-ab19-ce635150748f.svg) format("svg");
-}
 
 :root {
 	--copper: rgb(128,86,71);
