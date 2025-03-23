@@ -609,8 +609,8 @@ a.mbs svg:hover {
 	}
 
 	.mbs svg {
-		width: 4.5vh;
-		max-width: 60px;
+    width: 3vh;
+    height: auto;
 	}
 }
 
