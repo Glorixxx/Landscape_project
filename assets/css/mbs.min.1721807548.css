@@ -688,10 +688,10 @@ a.mbs svg:hover {
     z-index: 98;
   }
 
-  .mbs svg {
-    width: 4.5vh;
-    max-width: 60px;
-  }
+	.mbs svg {
+    width: 3vh;
+    height: auto;
+	}
 }
 
 @media (orientation: landscape) and (max-height: 400px) and (max-width: 1024px) {
