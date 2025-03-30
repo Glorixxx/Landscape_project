@@ -859,7 +859,7 @@ section.text {
 }
 
 section.text > * {
-  width: 60ch;
+  width: 45ch;
 }
 
 section:first-of-type {
