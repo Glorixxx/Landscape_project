@@ -848,6 +848,9 @@ ul#index_list {
     padding-right: 11vw;
   }
 }
+.name{ 
+  font-size: 20px;
+}
 
 section.film,
 section.image,
