@@ -404,7 +404,23 @@ section.image {
     transform: translateY(0);
   }
 }
+
+.question-logo{
+  margin-top: 40px;
+}
 /* конец адаптации */
+
+/* Увеличение логотипа в шапке */
+#mbs_symbol .mbs svg {
+  width: 300px; /* Увеличьте по сравнению с текущими 30px */
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  #mbs_symbol .mbs svg {
+    width: 50px; /* Увеличьте для мобильных */
+  }
+}
 .name {
   display: flex;
   justify-content: flex-end;
