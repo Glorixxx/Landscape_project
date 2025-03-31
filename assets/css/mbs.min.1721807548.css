@@ -342,7 +342,69 @@ section.image {
   font-family: "Gogol", sans-serif;
   text-transform: lowercase;
 }
+/* адаптация для мобильников */
+@media (max-width: 768px) {
+  #index_list li {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  #menu_panel nav {
+    flex-direction: column;
+  }
+  
+  .mbs svg {
+    width: 30px;
+  }
+}
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  #index_list li {
+    width: 50%;
+  }
+}
+:root {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+}
+#index_list img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  #menu_button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--copper);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  #menu_panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--grey);
+    z-index: 999;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu_open #menu_panel {
+    transform: translateY(0);
+  }
+}
+/* конец адаптации */
 .name {
   display: flex;
   justify-content: flex-end;
