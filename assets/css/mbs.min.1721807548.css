@@ -788,7 +788,50 @@ a.mbs svg:hover {
     max-height: 100vw;
   }
 }
+/* 2 изображения в ряду */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: max(125px, 7.8125vw);
+  padding-bottom: max(125px, 7.8125vw);
+}
 
+.row .image {
+  width: 95%; /* Оставляем небольшой отступ между изображениями */
+  margin: 0;
+}
+
+.row .info-wrapper {
+  width: 100%;
+}
+
+.row .info-wrapper img {
+  width: 100%;
+  height: auto;
+  position: static;
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .row .image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* Увеличение логотипа в выпадающем меню */
+#menu_panel .mbs img {
+  width: 250px; 
+  height: auto;
+  margin-bottom: 20px; 
+}
+@media (max-width: 768px) {
+  #menu_panel .mbs img {
+    width: 100px; 
+  }
+}
 #contents {
   background-color: var(--white);
   width: 100%;
@@ -1300,4 +1343,165 @@ a#next::after {
 #error_404 section:first-of-type,
 #unsubscribed section:first-of-type {
   padding: max(125px, 7.8125vw) 0;
+}
+/* Общие адаптивные настройки */
+@media (max-width: 1024px) {
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  
+  main {
+    width: 100%;
+    height: auto;
+  }
+  
+  #contents > * {
+    border-bottom: 2vw solid var(--grey);
+  }
+}
+
+/* Адаптация меню */
+@media (max-width: 768px) {
+  #menu_panel {
+    padding: 20px;
+    justify-content: flex-start;
+    padding-top: 80px;
+  }
+  
+  #menu_panel .mbs img {
+    width: 120px;
+    margin-bottom: 30px;
+  }
+  
+  #menu_panel nav {
+    width: 100%;
+  }
+  
+  #menu_panel nav a {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  #menu_button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+/* Адаптация логотипа в шапке */
+@media (max-width: 768px) {
+  #mbs_symbol .mbs img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/*  Адаптация контента проектов */
+@media (max-width: 768px) {
+  section.image, 
+  section.text, 
+  section.film {
+    padding: 40px 20px;
+  }
+  
+  section:first-of-type {
+    padding-top: 80px;
+  }
+  
+  .info-wrapper {
+    max-width: 100%;
+  }
+  
+  .info-wrapper::before {
+    padding-top: 100% !important;
+  }
+  
+  .info-wrapper img {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Стили для рядов с двумя изображениями */
+  .row {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .row .image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*  Адаптация текста */
+@media (max-width: 768px) {
+  .text h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  section.text > * {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+/* Адаптация навигации между проектами */
+@media (max-width: 768px) {
+  #previous_next {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  
+  #previous_next a {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  #previous_next a#previous {
+    margin-bottom: 15px;
+  }
+  
+  #previous_next a::after {
+    display: none;
+  }
+  
+  #previous_next i {
+    display: inline;
+  }
+  
+  #previous_next i + b {
+    display: inline;
+  }
+}
+
+/* 7. Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  section.image, 
+  section.text, 
+  section.film {
+    padding: 30px 15px;
+  }
+  
+  .text h1 {
+    font-size: 16px;
+  }
+  
+  .text p {
+    font-size: 13px;
+  }
+  
+  #menu_panel nav a {
+    font-size: 14px;
+  }
 }
