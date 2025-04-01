@@ -15,33 +15,34 @@
           padding: 20px;
           text-align: center;
         }
-        
-        .slogan, .name {
+
+        .slogan,
+        .name {
           font-size: 1.5rem;
           line-height: 1.3;
         }
-        
+
         #menu_panel nav {
           display: flex;
           flex-direction: column;
           align-items: center;
         }
-        
+
         #menu_panel nav a {
           padding: 10px 0;
           font-size: 1.2rem;
         }
-        
+
         #menu_button {
           font-size: 1rem;
           padding: 10px 15px;
         }
-        
+
         .logo {
           max-width: 120px;
           height: auto;
         }
-        
+
         #heroes li img {
           object-fit: cover;
           height: 100%;
@@ -51,20 +52,20 @@
       body {
         overflow-x: hidden;
       }
-      
+
       #mbs_symbol {
         position: relative;
         z-index: 10;
       }
-      
+
       .slogan {
         margin-bottom: 0.5rem;
       }
-      
+
       .name {
         margin-top: 0;
       }
-      
+
       #menu_panel {
         transition: all 0.3s ease;
       }
@@ -140,38 +141,58 @@
           <a href="projects/index.html" class="mbs">
             <p class="slogan">Создаем <span>сады вашей</span> мечты</p>
             <p class="name">Маликова Марина</p>
-            <img class="logo" src="./assets/icons/Лого.svg" alt="Логотип Malikova Gardens" loading="lazy" />
+            <img
+              class="logo"
+              src="./assets/icons/Лого.svg"
+              alt="Логотип Malikova Gardens"
+              loading="lazy"
+            />
           </a>
         </div>
         <ul id="heroes" class="slideshow">
           <li>
             <a href="projects/index.html"
-              ><img src="assets/img/home/1.jpg" alt="Пример ландшафтного дизайна 1" decoding="async" loading="lazy"
+              ><img
+                src="assets/img/home/1.jpg"
+                alt="Пример ландшафтного дизайна 1"
+                decoding="async"
+                loading="lazy"
             /></a>
           </li>
           <li>
             <a href="projects/index.html"
-              ><img src="assets/img/home/2.jpg" alt="Пример ландшафтного дизайна 2" decoding="async" loading="lazy"
+              ><img
+                src="assets/img/home/2.jpg"
+                alt="Пример ландшафтного дизайна 2"
+                decoding="async"
+                loading="lazy"
             /></a>
           </li>
           <li>
             <a href="projects/index.html"
-              ><img src="assets/img/home/3.jpg" alt="Пример ландшафтного дизайна 3" decoding="async" loading="lazy"
+              ><img
+                src="assets/img/home/3.jpg"
+                alt="Пример ландшафтного дизайна 3"
+                decoding="async"
+                loading="lazy"
             /></a>
           </li>
           <li>
             <a href="projects/index.html"
-              ><img src="assets/img/home/4.jpg" alt="Пример ландшафтного дизайна 4" decoding="async" loading="lazy"
+              ><img
+                src="assets/img/home/4.jpg"
+                alt="Пример ландшафтного дизайна 4"
+                decoding="async"
+                loading="lazy"
             /></a>
           </li>
           <li>
             <a href="projects/index.html"
-              ><img src="assets/img/home/5.jpg" alt="Пример ландшафтного дизайна 5" decoding="async" loading="lazy"
-            /></a>
-          </li>
-          <li>
-            <a href="projects/index.html"
-              ><img src="assets/img/home/6.jpg" alt="Пример ландшафтного дизайна 6" decoding="async" loading="lazy"
+              ><img
+                src="assets/img/home/5.jpg"
+                alt="Пример ландшафтного дизайна 5"
+                decoding="async"
+                loading="lazy"
             /></a>
           </li>
         </ul>
@@ -181,14 +202,23 @@
     <div id="menu_panel">
       <div id="menu_container">
         <a href="index.html" class="mbs">
-          <img src="/assets/icons/Лого.svg" alt="Логотип Malikova Gardens" loading="lazy">
+          <img
+            src="/assets/icons/Лого.svg"
+            alt="Логотип Malikova Gardens"
+            loading="lazy"
+          />
         </a>
 
         <nav>
           <a class="home" href="index.html">ГЛАВНАЯ</a>
           <a class="projects" href="projects/index.html">ПРОЕКТЫ</a>
           <a class="enquire" href="enquire/index.html">ВОПРОСЫ</a>
-          <a class="instagram" target="_blank" rel="noopener noreferrer" href="https://t.me/malikova_gardens">
+          <a
+            class="instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://t.me/malikova_gardens"
+          >
             TELEGRAM
           </a>
         </nav>
@@ -196,33 +226,33 @@
     </div>
 
     <a id="menu_button" href="#" aria-label="Открыть меню">МЕНЮ</a>
-    
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.getElementById('menu_button');
-        const menuPanel = document.getElementById('menu_panel');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu_button");
+        const menuPanel = document.getElementById("menu_panel");
+
         if (menuButton && menuPanel) {
-          menuButton.addEventListener('click', function(e) {
+          menuButton.addEventListener("click", function (e) {
             e.preventDefault();
-            menuPanel.classList.toggle('active');
-            this.classList.toggle('active');
+            menuPanel.classList.toggle("active");
+            this.classList.toggle("active");
           });
         }
-        
-        if ('IntersectionObserver' in window) {
+
+        if ("IntersectionObserver" in window) {
           const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-          
+
           const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.getAttribute('src');
+                img.src = img.getAttribute("src");
                 imageObserver.unobserve(img);
               }
             });
           });
-          
+
           lazyImages.forEach((img) => imageObserver.observe(img));
         }
       });

@@ -86,6 +86,7 @@ picture {
 }
 
 img {
+  max-height: 140vh;
   border-style: none;
   display: block;
   height: auto;
@@ -286,7 +287,7 @@ h3 {
 }
 
 .mbs img {
-  height: 30px;
+  height: 60px;
 }
 
 @media (max-width: 1024px) {
@@ -348,11 +349,11 @@ section.image {
     width: 100%;
     padding: 20px;
   }
-  
+
   #menu_panel nav {
     flex-direction: column;
   }
-  
+
   .mbs svg {
     width: 30px;
   }
@@ -387,7 +388,7 @@ section.image {
     padding: 10px 15px;
     border-radius: 5px;
   }
-  
+
   #menu_panel {
     position: fixed;
     top: 0;
@@ -399,13 +400,13 @@ section.image {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
   }
-  
+
   .menu_open #menu_panel {
     transform: translateY(0);
   }
 }
 
-.question-logo{
+.question-logo {
   margin-top: 40px;
 }
 /* конец адаптации */
@@ -766,10 +767,10 @@ a.mbs svg:hover {
     z-index: 98;
   }
 
-	.mbs svg {
+  .mbs svg {
     width: 3vh;
     height: auto;
-	}
+  }
 }
 
 @media (orientation: landscape) and (max-height: 400px) and (max-width: 1024px) {
@@ -823,13 +824,13 @@ a.mbs svg:hover {
 }
 /* Увеличение логотипа в выпадающем меню */
 #menu_panel .mbs img {
-  width: 250px; 
+  width: 250px;
   height: auto;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 @media (max-width: 768px) {
   #menu_panel .mbs img {
-    width: 100px; 
+    width: 100px;
   }
 }
 #contents {
@@ -969,7 +970,7 @@ ul#index_list {
     padding-right: 11vw;
   }
 }
-.name{ 
+.name {
   font-size: 20px;
 }
 
@@ -1350,12 +1351,12 @@ a#next::after {
     margin: 0;
     height: 100%;
   }
-  
+
   main {
     width: 100%;
     height: auto;
   }
-  
+
   #contents > * {
     border-bottom: 2vw solid var(--grey);
   }
@@ -1368,21 +1369,21 @@ a#next::after {
     justify-content: flex-start;
     padding-top: 80px;
   }
-  
+
   #menu_panel .mbs img {
     width: 120px;
     margin-bottom: 30px;
   }
-  
+
   #menu_panel nav {
     width: 100%;
   }
-  
+
   #menu_panel nav a {
     margin-bottom: 15px;
     font-size: 16px;
   }
-  
+
   #menu_button {
     font-size: 14px;
     padding: 12px 20px;
@@ -1399,36 +1400,36 @@ a#next::after {
 
 /*  Адаптация контента проектов */
 @media (max-width: 768px) {
-  section.image, 
-  section.text, 
+  section.image,
+  section.text,
   section.film {
     padding: 40px 20px;
   }
-  
+
   section:first-of-type {
     padding-top: 80px;
   }
-  
+
   .info-wrapper {
     max-width: 100%;
   }
-  
+
   .info-wrapper::before {
     padding-top: 100% !important;
   }
-  
+
   .info-wrapper img {
     position: static;
     width: 100%;
     height: auto;
   }
-  
+
   /* Стили для рядов с двумя изображениями */
   .row {
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .row .image {
     width: 100%;
     margin-bottom: 20px;
@@ -1441,12 +1442,12 @@ a#next::after {
     font-size: 18px;
     margin-bottom: 20px;
   }
-  
+
   .text p {
     font-size: 14px;
     line-height: 1.5;
   }
-  
+
   section.text > * {
     width: 100%;
     max-width: 100%;
@@ -1461,25 +1462,25 @@ a#next::after {
     height: auto;
     padding: 20px;
   }
-  
+
   #previous_next a {
     width: 100%;
     padding: 10px 0;
     text-align: center;
   }
-  
+
   #previous_next a#previous {
     margin-bottom: 15px;
   }
-  
+
   #previous_next a::after {
     display: none;
   }
-  
+
   #previous_next i {
     display: inline;
   }
-  
+
   #previous_next i + b {
     display: inline;
   }
@@ -1487,20 +1488,20 @@ a#next::after {
 
 /* 7. Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
-  section.image, 
-  section.text, 
+  section.image,
+  section.text,
   section.film {
     padding: 30px 15px;
   }
-  
+
   .text h1 {
     font-size: 16px;
   }
-  
+
   .text p {
     font-size: 13px;
   }
-  
+
   #menu_panel nav a {
     font-size: 14px;
   }
